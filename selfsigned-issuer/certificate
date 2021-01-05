@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: first-tls
+  namespace: sandbox
+spec:
+  secretName: first-tls
+  dnsNames:
+  - "*.sandbox.svc.cluster.local"
+  - "*.sandbox"
+  issuerRef:
+    name: selfsigned-issuer
